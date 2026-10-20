@@ -1,0 +1,3 @@
+loaded 225465 headers from 1019 files (0.3s); options: symmetry=false obbt_l=false
+structure ok: 225465 nodes, 112733 leaves, complete tree (0.5s)
+REPLAY OK: 225465 nodes checked exactly, 0 failures, 1040.3s

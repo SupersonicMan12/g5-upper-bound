@@ -1,0 +1,15 @@
+K_dyadic = "4.5"
+K_rational = "9//2"
+arithmetic = "exact dyadic (BigInt mantissa, integer exponent)"
+date_utc = "2026-09-27T06:15:43.120"
+elapsed_seconds = 28.31275510787964
+failures = []
+format = "N5LUBBReplay-v1"
+leaves = 3772
+nodes = 7543
+status = "verified"
+use_theorems = true
+
+[code_sha256]
+"lubb.jl" = "bce8fd374737672741eb1e035f57c73800c8bf310e5b67c80b4b77040eeb19de"
+"lubb_replay.jl" = "212d8142422a226d0519ae862a0b0d7c4b1e8141e5e54adec7a09a1c484d916a"

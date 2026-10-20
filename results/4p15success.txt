@@ -1,0 +1,48 @@
+hanszhu@Hanss-MacBook-Air 4.5 Research % python3 checker.py 9/2 data/logs_K4p5 data/certificates_K4p5.jsonl
+N = 7543
+leaves = True, tightenings needed = 99127
+rows = 328, w212 = [-1, 1], w322 = [-2, 2]
+0 Certificates Checked
+100000 Certificates Checked
+verified 99127 tightenings and 3772 leaves
+hanszhu@Hanss-MacBook-Air 4.5 Research % time python3 checker.py 2175795/524288 data/logs_K4p15 data/certificates_K4p15.jsonl
+N = 225465
+leaves = True, tightenings needed = 3366236
+rows = 328, w212 = [-1, 1], w322 = [-2, 2]
+0 Certificates Checked
+100000 Certificates Checked
+200000 Certificates Checked
+300000 Certificates Checked
+400000 Certificates Checked
+500000 Certificates Checked
+600000 Certificates Checked
+700000 Certificates Checked
+800000 Certificates Checked
+900000 Certificates Checked
+1000000 Certificates Checked
+1100000 Certificates Checked
+1200000 Certificates Checked
+1300000 Certificates Checked
+1400000 Certificates Checked
+1500000 Certificates Checked
+1600000 Certificates Checked
+1700000 Certificates Checked
+1800000 Certificates Checked
+1900000 Certificates Checked
+2000000 Certificates Checked
+2100000 Certificates Checked
+2200000 Certificates Checked
+2300000 Certificates Checked
+2400000 Certificates Checked
+2500000 Certificates Checked
+2600000 Certificates Checked
+2700000 Certificates Checked
+2800000 Certificates Checked
+2900000 Certificates Checked
+3000000 Certificates Checked
+3100000 Certificates Checked
+3200000 Certificates Checked
+3300000 Certificates Checked
+3400000 Certificates Checked
+verified 3366236 tightenings and 112733 leaves
+python3 checker.py 2175795/524288 data/logs_K4p15   1934.00s user 8.66s system 99% cpu 32:33.28 total

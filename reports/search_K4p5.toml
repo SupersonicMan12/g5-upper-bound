@@ -1,0 +1,27 @@
+K_dyadic = "4.5"
+K_rational = "9//2"
+K_requested = "4.5"
+arithmetic = "HiGHS floating-point LPs suggest multipliers; every pruning and bound tightening is certified by outward-rounded interval arithmetic on exact dyadic box data"
+budget_per_task = 1000
+date_utc = "2026-09-27T06:15:06.458"
+elapsed_seconds = 25.946808099746704
+format = "N5LUBB-v1"
+julia_version = "1.12.7"
+logdir = "lubb_runs/logs_K4p5"
+lp_failures = 0
+lp_solves = 170164
+max_depth = 21
+nodes = 7543
+open_count = 0
+statement = "If status = proved (and the replay confirms it), no real 5x5 matrix with any legal complete-pivoting sequence has fifth pivot p5 >= K; with g4 = 4 this gives g5 < K."
+status = "proved"
+tasks = 72
+theorem_inputs = ["g3 = 9/4 (Tornheim 1965, Cohen 1974)", "g4 = 4 (Cryer 1968, Cohen 1974)", "Cohen 1974: p3 <= 3 p2 - p2^2 for normalized 3x3 CP matrices with p3 > 2"]
+unresolved_boxes = []
+unresolved_count = 0
+use_theorems = true
+workers = 9
+
+[code_sha256]
+"lubb.jl" = "bce8fd374737672741eb1e035f57c73800c8bf310e5b67c80b4b77040eeb19de"
+"lubb_search.jl" = "e34295d41d6bb25f0c7a5ede862f6e4201b010462299bb01462132dda244f828"

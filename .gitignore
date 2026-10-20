@@ -1,0 +1,4 @@
+.DS_Store
+data/certificates_*.jsonl
+data/certificates_*.jsonl.xz
+AGENTS.local.md

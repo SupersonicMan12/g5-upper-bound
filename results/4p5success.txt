@@ -1,0 +1,8 @@
+hanszhu@Hanss-MacBook-Air 4.5 Research % time python3 checker.py 9/2 data/logs_K4p5 data/certificates_K4p5.jsonl             
+N = 7543
+leaves = True, tightenings needed = 99127
+rows = 328, w212 = [-1, 1], w322 = [-2, 2]
+0 Certificates Checked
+100000 Certificates Checked
+verified 99127 tightenings and 3772 leaves
+python3 checker.py 9/2 data/logs_K4p5 data/certificates_K4p5.jsonl  51.19s user 0.16s system 99% cpu 51.442 total
