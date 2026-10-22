@@ -1,4 +1,6 @@
 .DS_Store
 data/certificates_*.jsonl
 data/certificates_*.jsonl.xz
+data/certificates_*.jsonl.xz.part*
+data/.zupload_done
 AGENTS.local.md

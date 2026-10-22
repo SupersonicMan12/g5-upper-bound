@@ -20,12 +20,14 @@ The certificates are too large for GitHub and are needed to run the checker. The
 
 ## Quick verification of the result
 
-Requirements: Python 3.9 or newer, `xz` and about 7 GB of free disk space. No other software is needed.
+Requirements: Python 3.9 or newer, `xz` and about 9 GB of free disk space (the downloaded parts can be deleted after joining). No other software is needed.
 
 ```sh
 git clone https://github.com/SupersonicMan12/g5-upper-bound
 cd g5-upper-bound/data
-# download certificates_K4p5.jsonl.xz and certificates_K4p15.jsonl.xz from Zenodo into data/
+# download all files of https://doi.org/10.5281/zenodo.23499516 into data/:
+#   certificates_K4p5.jsonl.xz, certificates_K4p15.jsonl.xz.part00 ... part49, SHA256SUMS
+cat certificates_K4p15.jsonl.xz.part* > certificates_K4p15.jsonl.xz
 xz -dk certificates_K4p5.jsonl.xz certificates_K4p15.jsonl.xz
 shasum -a 256 -c SHA256SUMS # every line should print OK
 cd ..
@@ -33,7 +35,9 @@ python3 checker.py 9/2 data/logs_K4p5 data/certificates_K4p5.jsonl
 python3 checker.py 2175795/524288 data/logs_K4p15 data/certificates_K4p15.jsonl
 ```
 
-On Linux, `sha256sum -c SHA256SUMS` does the same as `shasum -a 256 -c`. `xz` is included in most Linux distributions; on macOS it can be installed with Homebrew (`brew install xz`), and on Windows 7-Zip can decompress `.xz` files.
+On Zenodo, `certificates_K4p15.jsonl.xz` is stored as 50 consecutive byte chunks (`.part00` to `.part49`, about 20 MB each, made with `split -d -a 2 -n 50`); `cat` rejoins them in order, and `SHA256SUMS` confirms that the joined file is identical to the original. The `SHA256SUMS` on Zenodo is identical to the one in this repository.
+
+On Linux, `sha256sum -c SHA256SUMS` does the same as `shasum -a 256 -c`. `xz` is included in most Linux distributions; on macOS it can be installed with Homebrew (`brew install xz`). On Windows, run the commands in Git Bash or WSL.
 
 A successful run ends with "verified ... tightenings and ... leaves", and any failed check stops with an AssertionError. Measured on an Apple M4 with Python 3.11.9:
 
@@ -53,7 +57,7 @@ Full transcripts are in `results/`.
 | `certificates_K4p5.jsonl.xz` | 26 MB | `c12086e1565a6775badda2d3197c15e5ae9580e9daf000001a5a4859698dda0c` |
 | `certificates_K4p15.jsonl.xz` | 1.01 GB | `f796fb185a9a36769ed9360e150d7cf6c1ccf9271face0f7bb642dd9939edc44` |
 
-The `.xz` files are the downloads from Zenodo; the decompressed `.jsonl` files are exactly the files that `checker.py` verified. These hashes are also in `data/SHA256SUMS` and on the Zenodo record. The node logs (the search trees) are in `data/logs_K4p5/` and `data/logs_K4p15/`. All formats are described in `data_formats.md`.
+`certificates_K4p5.jsonl.xz` is downloaded from Zenodo directly and `certificates_K4p15.jsonl.xz` is obtained by joining its 50 parts; the decompressed `.jsonl` files are exactly the files that `checker.py` verified. These hashes are also in `data/SHA256SUMS` and on the Zenodo record. The node logs (the search trees) are in `data/logs_K4p5/` and `data/logs_K4p15/`. All formats are described in `data_formats.md`.
 
 ## Overview of the code
 
