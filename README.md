@@ -13,8 +13,7 @@ sequence, has fifth pivot $p_5 \ge K$ for
 - $K = 9/2 = 4.5$, and
 - $K = 2175795/2^{19} = 4.1499996\ldots$ (hence $g_5 \le 4.15$).
 
-The previous best upper bound was $g_5 \le 4.84$ (Chen, Edelman, Urschel, 2026); their
-explicit matrix gives $g_5 \ge 4.1325\ldots$.
+Chen, Edelman and Urschel (2026) proved $g_5 \le 4.84$; their explicit matrix gives $g_5 \ge 4.1325\ldots$. Ma and Wu (2026) have since posted a preprint claiming $g_5 = 4.1325\ldots$ exactly; see `g5.pdf` for discussion.
 
 The certificates are too large for GitHub and are needed to run the checker. They are archived on Zenodo: [doi:10.5281/zenodo.23499516](https://doi.org/10.5281/zenodo.23499516).
 
